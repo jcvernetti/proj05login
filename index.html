@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+
+<body>
+    <!--5. Crie uma tela de login. Campos: Usuário, Senha; Botões: Login, Recuperar Senha;
+    Critérios: 
+        a) A senha deverá ter no mínimo 8 e no máximo 15 caracteres;
+        b) O campo usuário deverá permitir autocomplete;
+        c) O campo senha não deverá permitir autocomplete;
+        d) A senha deverá ser composta por letras maiúsculas e minúsculas, números e @#$  
+            pattern="^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[@#$])[a-zA-Z0-9@#$]{8,15}$"(edited)-->
+
+    <!-- Senha -->
+    <form action="" method="GET" ">
+        <fieldset>
+            <legend>Login de Usuário</legend>
+            <br><br> 
+            <!-- Nome do usuário -->
+            <label for="idNomeUser">Nome do usuário:</label>
+            <input type="text" id="idNomeUser" name="nmNomeUser" autocomplete="on">
+           
+            <br><br>                
+            <label for=" idPassword">Senha:</label>
+            <br>
+            <input type="password" id="idPassword" name="nmPassword" minlength="8" maxlength="15"
+            pattern="^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[@#$])[a-zA-Z0-9@#$]{8,15}$" autocomplete="off">
+            <br>
+            <small>(A senha deverá ser composta por letras maiúsculas e minúsculas,</small>
+            <br>
+            <small> números e @#$, contendo entre 8 e 15 caracteres)</small>
+            <br>
+        </fieldset>
+        <br><br>
+        <button type="submit">BT Salvar</button>
+        <button type="reset">BT Limpar</button>
+        <button type="button" onclick="alert('Olá Pessoal!')">BT Calcular</button>
+    </form>
+</body>
+
+</html>

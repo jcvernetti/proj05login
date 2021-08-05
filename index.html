@@ -6,6 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+
+    <style>
+        input {
+            margin-bottom: 8px;
+            border-radius: 4px;
+            border: none;
+            border-bottom: 1px solid red;
+
+        }
+
+        .cfieldset{
+            border-radius: 45px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-width: 3px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -17,20 +35,19 @@
         d) A senha deverá ser composta por letras maiúsculas e minúsculas, números e @#$  
             pattern="^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[@#$])[a-zA-Z0-9@#$]{8,15}$"(edited)-->
 
-    <!-- Senha -->
-    <form action="" method="GET" ">
-        <fieldset>
+    <!-- Senha --> <!--novalidate-->
+    <form action="https://www.proway.com.br/ead/entrar/" method="POST" target="_blank" >
+        <fieldset class="cfieldset">
             <legend>Login de Usuário</legend>
             <br><br> 
             <!-- Nome do usuário -->
             <label for="idNomeUser">Nome do usuário:</label>
-            <input type="text" id="idNomeUser" name="nmNomeUser" autocomplete="on">
+            <input type="text" id="idNomeUser" name="nmNomeUser"  autocomplete="on" required>
            
             <br><br>                
             <label for=" idPassword">Senha:</label>
             <br>
-            <input type="password" id="idPassword" name="nmPassword" minlength="8" maxlength="15"
-            pattern="^(?=.[A-Z])(?=.[a-z])(?=.[0-9])(?=.[@#$])[a-zA-Z0-9@#$]{8,15}$" autocomplete="off">
+            <input type="password" id="idPassword" name="nmPassword" minlength="8" maxlength="15" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$])[a-zA-Z0-9@#$]{8,15}$" autocomplete="off" required>
             <br>
             <small>(A senha deverá ser composta por letras maiúsculas e minúsculas,</small>
             <br>
@@ -38,9 +55,9 @@
             <br>
         </fieldset>
         <br><br>
-        <button type="submit">BT Salvar</button>
+        <button type="submit">BT Login</button>
         <button type="reset">BT Limpar</button>
-        <button type="button" onclick="alert('Olá Pessoal!')">BT Calcular</button>
+        <button type="button">BT Recuperar senha</button>
     </form>
 </body>
 
